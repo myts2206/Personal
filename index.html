@@ -9,6 +9,8 @@
     <style>
         body {
             transition: background 0.3s, color 0.3s;
+            font-size: 16px;
+            line-height: 1.6;
         }
         .dark-mode {
             background: #1a1a1a;
@@ -16,7 +18,7 @@
         }
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
         .project-card {
@@ -28,7 +30,7 @@
         }
         .project-card img {
             width: 100%;
-            height: 300px;
+            height: 250px;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -40,21 +42,47 @@
         }
         .profile-container {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            gap: 20px;
         }
         .profile-pic {
-            width: 370px;
-            height: 250px;
+            width: 100%;
+            max-width: 350px;
+            height: auto;
             border-radius: 10px;
-            margin-right: 20px;
         }
-
         #about h2 {
-            margin-bottom: 5px;  /* Reduces the gap between h2 and p */
+            margin-bottom: 5px;
         }
-
         #about p {
-            margin-top: 0; /* Removes any default top margin */
+            margin-top: 0;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 5px;
+        }
+        nav ul li a, nav ul li button {
+            font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            .project-card img {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -76,97 +104,92 @@
             <img src="mytu.jpg" alt="Srihith Reddy" class="profile-pic">
             <div>
                 <h2>Welcome to My Portfolio</h2>
-                <p>Hi! I'm Srihith Reddy, an AI enthusiast, researcher, and innovator passionate about solving real-world problems. I thrive on exploring the intersection of technology, creativity, and research to design impactful solutions. With a background in computer science and engineering, I've focused on applying AI and machine learning to various domains, including IoT, energy sustainability, and automation. I love transforming theoretical concepts into practical applications and prototyping innovative ideas.</p>
-            </div>
-        </section>
-<section id="projects">
-            <h2>My Patents</h2>
-            <div class="projects">
-		<div class="project-card">
-                    <img src="patent.jpg" alt="AnimateMe">
-                    <h3>Chemistry Analyzer</h3>
-                    <p>Modelling and Performance Analysis of PEM Fuel Cells Using Machine Learning Techniques</p>
-                </div>
-                <div class="project-card">
-                    <img src="water.jpg" alt="IoT-Based Solar Water Purifier">
-                    <h3>IoT-Based Solar Water Purifier</h3>
-                    <p>An AI-powered water purification system using solar energy.</p>
-                </div>                <div class="project-card">
-                    <img src="soil.jpg" alt="Smart Refrigerator System">
-                    <h3>Soil Nutrients analyzer</h3>
-                    <p>A Survey on Graph Neural Networks and its Applications in Various Domains</p>
-                </div>
-                
+                <p>Hi! I'm Srihith Reddy, an AI enthusiast, researcher, and innovator passionate about solving real-world problems...</p>
             </div>
         </section>
 
+        <section id="projects">
+            <h2>My Patents</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="patent.jpg" alt="Patent">
+                    <h3>Chemistry Analyzer</h3>
+                    <p>PEM Fuel Cells Using Machine Learning Techniques</p>
+                </div>
+                <div class="project-card">
+                    <img src="water.jpg" alt="Water Purifier">
+                    <h3>IoT-Based Solar Water Purifier</h3>
+                    <p>AI-powered solar purification system.</p>
+                </div>
+                <div class="project-card">
+                    <img src="soil.jpg" alt="Soil Analyzer">
+                    <h3>Soil Nutrients Analyzer</h3>
+                    <p>Graph Neural Networks Survey</p>
+                </div>
+            </div>
+        </section>
 
         <section id="projects">
             <h2>My Projects</h2>
             <div class="projects">
                 <div class="project-card">
-                    <img src="water.jpg" alt="IoT-Based Solar Water Purifier">
+                    <img src="water.jpg" alt="Water Purifier">
                     <h3>IoT-Based Solar Water Purifier</h3>
-                    <p>An AI-powered water purification system using solar energy.</p>
+                    <p>AI-powered solar water purification system.</p>
                 </div>
                 <div class="project-card">
-                    <img src="three.png" alt="Smart Refrigerator System">
-                    <h3>Automation of Snapstreaks on Snapchat</h3>
-                    <p>A Project on how snapstreaks are maintained where the bot sends the snaps to everyone daily</p>
+                    <img src="three.png" alt="Snapstreak Bot">
+                    <h3>Snapstreak Automation</h3>
+                    <p>Automating Snapstreaks on Snapchat.</p>
                 </div>
                 <div class="project-card">
-                    <img src="OfflineLLM.png" alt="AnimateMe">
-                    <h3>Customizing-Large-Language-Models-for-NCERT-Textbooks</h3>
-                    <p>The model training prioritizes simplicity for NCERT-based content, delivering concise responses to straightforward queries.</p>
+                    <img src="OfflineLLM.png" alt="LLM Project">
+                    <h3>Offline NCERT LLM</h3>
+                    <p>Customizing LLMs for NCERT textbooks.</p>
                 </div>
-                <!-- Additional Projects -->
-<div class="project-card">
-                    <img src="Track.jpg" alt="Project 4">
+                <div class="project-card">
+                    <img src="Track.jpg" alt="Daily Tracker">
                     <h3>Daily Activity Tracker</h3>
-                    <p>A brief description of the seventh project.</p>
+                    <p>A personal activity tracking system.</p>
                 </div>
-               
                 <div class="project-card">
-                    <img src="Two.png" alt="Project 2">
+                    <img src="Two.png" alt="AI Chatbot">
                     <h3>AI Chatbot</h3>
-                    <p>A brief description of the fifth project.</p>
+                    <p>A chatbot designed for intelligent conversations.</p>
                 </div>
                 <div class="project-card">
-                    <img src="doc.jpg" alt="Project 3">
-                    <h3>Finalcial Document classifier</h3>
-                    <p>A brief description of the sixth project.</p>
+                    <img src="doc.jpg" alt="Doc Classifier">
+                    <h3>Financial Document Classifier</h3>
+                    <p>Classification system for financial documents.</p>
                 </div>
-                
-            </div>
-        </section>
- <section id="projects">
-            <h2>My Publications</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <img src="chem.png" alt="IoT-Based Solar Water Purifier">
-                    <h3>Journal of Molecular Structure</h3>
-                    <p>Synthesis and antioxidant activity of gallic acid based fluorescent benzothiazole analogue: Photophysical, electrochemical, conceptual DFT, QTAIM and docking investigations</p>
-                </div>
-                <div class="project-card">
-                    <img src="gnn.png" alt="Smart Refrigerator System">
-                    <h3>SN Computer Science Journal</h3>
-                    <p>A Survey on Graph Neural Networks and its Applications in Various Domains</p>
-                </div>
-                <div class="project-card">
-                    <img src="pemfc.png" alt="AnimateMe">
-                    <h3>IEEE Explore</h3>
-                    <p>Modelling and Performance Analysis of PEM Fuel Cells Using Machine Learning Techniques</p>
-                </div>
-                <!-- Additional Projects -->
-                <div class="project-card">
-                    <img src="LLM.png" alt="Project 1">
-                    <h3>IJRSR</h3>
-                    <p>Customizing large language models for ncert textbooks and development of interface which works offline</p>
-                </div>
-                
             </div>
         </section>
 
+        <section id="projects">
+            <h2>My Publications</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="chem.png" alt="Chemistry Research">
+                    <h3>Journal of Molecular Structure</h3>
+                    <p>Gallic acid-based fluorescent benzothiazole analysis.</p>
+                </div>
+                <div class="project-card">
+                    <img src="gnn.png" alt="GNN Survey">
+                    <h3>SN Computer Science Journal</h3>
+                    <p>Survey on Graph Neural Networks.</p>
+                </div>
+                <div class="project-card">
+                    <img src="pemfc.png" alt="PEM Fuel Cell">
+                    <h3>IEEE Explore</h3>
+                    <p>Performance Analysis of PEM Fuel Cells.</p>
+                </div>
+                <div class="project-card">
+                    <img src="LLM.png" alt="Offline LLM">
+                    <h3>IJRSR</h3>
+                    <p>Customizing LLMs for offline use.</p>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer class="container">
