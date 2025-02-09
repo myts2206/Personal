@@ -3,8 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Srihith Reddy - Personal Website</title>
+    <title>Srihith Reddy - Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .project-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .dark-mode .project-card {
+            background: #333;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 370px;
+            height: 250px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        #about h2 {
+            margin-bottom: 5px;  /* Reduces the gap between h2 and p */
+        }
+
+        #about p {
+            margin-top: 0; /* Removes any default top margin */
+        }
+    </style>
 </head>
 <body>
     <nav class="container-fluid">
@@ -13,47 +65,118 @@
         </ul>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact" role="button">Contact</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button onclick="toggleDarkMode()">🌙</button></li>
         </ul>
     </nav>
+    
     <main class="container">
-        <div class="grid">
-            <section>
-                <hgroup>
-                    <h2>Welcome to My Portfolio</h2>
-                    <h3>AI Enthusiast | Innovator | Researcher</h3>
-                </hgroup>
-                <p>Hello! I am Paluchani Srihith Reddy, a passionate Artificial Intelligence and Machine Learning enthusiast. I specialize in cutting-edge research and innovative projects that make a difference.</p>
-                <figure>
-                    <img src="https://files.oaiusercontent.com/file-VdJWccwx6Y19oJdeVvPKBs?se=2024-12-09T14%3A42%3A44Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da5a0d0b1-db1a-48a3-8e7a-7e0974e41d8e.webp&sig=5qjxtkpw9rIf6DjgRCUs3ufCkA8AuDxDMm%2B%2B4H3zz5o%3D" alt="Srihith Reddy's Research Image" />
-                    <figcaption><a href="#" target="_blank">View My Research</a></figcaption>
-                </figure>
-                <h3>My Work</h3>
-                <p>I have worked on various research projects, patents, and publications that contribute to the advancement of AI, IoT, and sustainability.</p>
-                <h3>Achievements</h3>
-                <p>From receiving scholarships to winning hackathons and publishing in esteemed journals, my journey is fueled by curiosity and hard work.</p>
-            </section>
-        </div>
+        <section id="about" class="profile-container">
+            <img src="C:\\Users\\gadda\\Downloads\\personal\\mytu.jpg" alt="Srihith Reddy" class="profile-pic">
+            <div>
+                <h2>Welcome to My Portfolio</h2>
+                <p>Hi! I'm Srihith Reddy, an AI enthusiast, researcher, and innovator passionate about solving real-world problems. I thrive on exploring the intersection of technology, creativity, and research to design impactful solutions. With a background in computer science and engineering, I've focused on applying AI and machine learning to various domains, including IoT, energy sustainability, and automation. I love transforming theoretical concepts into practical applications and prototyping innovative ideas.</p>
+            </div>
+        </section>
+<section id="projects">
+            <h2>My Patents</h2>
+            <div class="projects">
+		<div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\patent.jpg" alt="AnimateMe">
+                    <h3>Chemistry Analyzer</h3>
+                    <p>Modelling and Performance Analysis of PEM Fuel Cells Using Machine Learning Techniques</p>
+                </div>
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\water.jpg" alt="IoT-Based Solar Water Purifier">
+                    <h3>IoT-Based Solar Water Purifier</h3>
+                    <p>An AI-powered water purification system using solar energy.</p>
+                </div>                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\soil.jpg" alt="Smart Refrigerator System">
+                    <h3>Soil Nutrients analyzer</h3>
+                    <p>A Survey on Graph Neural Networks and its Applications in Various Domains</p>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\water.jpg" alt="IoT-Based Solar Water Purifier">
+                    <h3>IoT-Based Solar Water Purifier</h3>
+                    <p>An AI-powered water purification system using solar energy.</p>
+                </div>
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\three.png" alt="Smart Refrigerator System">
+                    <h3>Automation of Snapstreaks on Snapchat</h3>
+                    <p>A Project on how snapstreaks are maintained where the bot sends the snaps to everyone daily</p>
+                </div>
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\OfflineLLM.png" alt="AnimateMe">
+                    <h3>Customizing-Large-Language-Models-for-NCERT-Textbooks</h3>
+                    <p>The model training prioritizes simplicity for NCERT-based content, delivering concise responses to straightforward queries.</p>
+                </div>
+                <!-- Additional Projects -->
+<div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\Track.jpg" alt="Project 4">
+                    <h3>Daily Activity Tracker</h3>
+                    <p>A brief description of the seventh project.</p>
+                </div>
+               
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\Two.png" alt="Project 2">
+                    <h3>AI Chatbot</h3>
+                    <p>A brief description of the fifth project.</p>
+                </div>
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\doc.jpg" alt="Project 3">
+                    <h3>Finalcial Document classifier</h3>
+                    <p>A brief description of the sixth project.</p>
+                </div>
+                
+            </div>
+        </section>
+ <section id="projects">
+            <h2>My Publications</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\chem.png" alt="IoT-Based Solar Water Purifier">
+                    <h3>Journal of Molecular Structure</h3>
+                    <p>Synthesis and antioxidant activity of gallic acid based fluorescent benzothiazole analogue: Photophysical, electrochemical, conceptual DFT, QTAIM and docking investigations</p>
+                </div>
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\gnn.png" alt="Smart Refrigerator System">
+                    <h3>SN Computer Science Journal</h3>
+                    <p>A Survey on Graph Neural Networks and its Applications in Various Domains</p>
+                </div>
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\pemfc.png" alt="AnimateMe">
+                    <h3>IEEE Explore</h3>
+                    <p>Modelling and Performance Analysis of PEM Fuel Cells Using Machine Learning Techniques</p>
+                </div>
+                <!-- Additional Projects -->
+                <div class="project-card">
+                    <img src="C:\\Users\\gadda\\Downloads\\personal\\LLM.png" alt="Project 1">
+                    <h3>IJRSR</h3>
+                    <p>Customizing large language models for ncert textbooks and development of interface which works offline</p>
+                </div>
+                
+            </div>
+        </section>
+
     </main>
-    <section aria-label="Subscribe example">
-        <div class="container">
-            <article>
-                <hgroup>
-                    <h2>Stay Connected</h2>
-                    <h3>Subscribe to get updates on my latest projects and research</h3>
-                </hgroup>
-                <form class="grid">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Name" required />
-                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Email" required />
-                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-                </form>
-            </article>
-        </div>
-    </section>
+    
     <footer class="container">
-        <small><a href="#about">About</a> • <a href="#contact">Contact</a></small>
+        <p>&copy; 2024 Srihith Reddy | <a href="#contact">Contact</a></p>
     </footer>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
-
